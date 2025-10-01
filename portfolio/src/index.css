@@ -1,14 +1,36 @@
 @import "tailwindcss";
 
+/* Reset de escala base */
+:root {
+  font-size: 14px; /* Reduz de 16px (padrão) para 14px */
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 15px; /* Tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 15px; /* Desktop */
+  }
+}
+
 body {
-  background: radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.12), transparent 40%),
-              radial-gradient(circle at 85% 80%, rgba(236, 72, 153, 0.1), transparent 45%),
-              radial-gradient(circle at 70% 30%, rgba(34, 197, 94, 0.08), transparent 50%),
-              linear-gradient(to bottom, #0f172a, #1e293b 60%, #0f172a);
+  background: radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.15), transparent 40%),
+              radial-gradient(circle at 85% 80%, rgba(236, 72, 153, 0.12), transparent 45%),
+              radial-gradient(circle at 70% 30%, rgba(34, 197, 94, 0.1), transparent 50%),
+              linear-gradient(135deg, #0f172a, #1e293b 60%, #0f172a);
   background-attachment: fixed;
   background-size: cover;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
+  animation: bg-move 30s ease-in-out infinite alternate;
+}
+
+@keyframes bg-move {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 50% 50%; }
+  100% { background-position: 0% 100%; }
 }
 
 /* Efeito sutil de "grão" para dar textura */
@@ -25,4 +47,16 @@ body::before {
 #root {
   position: relative;
   z-index: 1;
+}
+
+/* Remove zoom mobile padrão */
+* {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Otimiza renderização */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
