@@ -3,6 +3,7 @@
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import { Award, Briefcase, Trophy, Clock, Code2, Zap, Sparkles, ArrowRight } from "lucide-react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const About: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)

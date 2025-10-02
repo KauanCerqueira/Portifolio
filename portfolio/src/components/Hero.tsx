@@ -1,6 +1,7 @@
 import type React from "react"
 import { ArrowRight, Code2, Sparkles } from "lucide-react"
 import HeroScene from "./HeroScene"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Hero: React.FC = () => {
   return (

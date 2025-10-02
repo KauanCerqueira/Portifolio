@@ -3,6 +3,7 @@
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import { Code, Cpu, Zap, Globe, Database, Shield } from "lucide-react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface Service {
   icon: React.ReactNode

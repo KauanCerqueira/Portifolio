@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { Menu, X, Code2, Mail, Github, Linkedin, Instagram } from "lucide-react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)

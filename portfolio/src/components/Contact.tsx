@@ -1,5 +1,6 @@
 import type React from "react"
 import { MessageSquare, Smartphone, CheckCircle, Zap, Clock, Star } from "lucide-react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Contact: React.FC = () => {
   const whatsappNumber = "5519993817292"

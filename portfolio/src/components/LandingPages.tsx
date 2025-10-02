@@ -15,6 +15,7 @@ import {
   Play,
   Pause,
 } from "lucide-react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface LandingPage {
   title: string

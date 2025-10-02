@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { TrendingUp, Clock, Users, Zap, Code2, Sparkles, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface Project {
   title: string
