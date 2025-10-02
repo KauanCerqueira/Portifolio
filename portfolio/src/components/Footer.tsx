@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code2, Mail, Phone, MapPin, Github, Linkedin, ArrowUp, Youtube, Instagram } from 'lucide-react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

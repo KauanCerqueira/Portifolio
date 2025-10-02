@@ -2,7 +2,7 @@ import React, { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Float, MeshDistortMaterial, Sphere, Text } from "@react-three/drei";
 import * as THREE from "three";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Componente de partículas de código
 const CodeParticles: React.FC = () => {
