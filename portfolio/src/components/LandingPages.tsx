@@ -35,7 +35,7 @@ interface LandingPagesShowcaseProps {
 }
 
 const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
-  phoneNumber = "5511999999999",
+  phoneNumber = "5519993817292",
   autoPlayInterval = 20000,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -159,7 +159,7 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-10 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-6 px-4 relative overflow-hidden">
       {/* Background Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -168,31 +168,31 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Header */}
-        <header className="text-center mb-6">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-1.5 text-xs font-semibold mb-3">
+        {/* Header - Mais compacto */}
+        <header className="text-center mb-4">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-4 py-1 text-xs font-semibold mb-2">
             <Sparkles className="w-3 h-3 text-purple-300" />
             <span className="text-purple-200">Portfólio de Landing Pages</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-1 tracking-tight">
             Designs que{" "}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               Convertem
             </span>
           </h1>
-          <p className="text-sm text-slate-300 max-w-2xl mx-auto px-4">
+          <p className="text-xs text-slate-300 max-w-2xl mx-auto px-4">
             Explore minha coleção de landing pages criativas e otimizadas para alta performance
           </p>
         </header>
 
         {/* Main Showcase Card */}
         <div className="bg-slate-800/50 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden border border-slate-700/50">
-          <div className="grid lg:grid-cols-2 gap-0">
+          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-0">
             {/* Preview Section */}
             <section className="relative bg-slate-900/50 p-4" aria-label="Preview da landing page">
               {/* Category Badge */}
               <div className="absolute top-4 left-4 z-10">
-                <div className="inline-flex items-center space-x-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-slate-900 text-xs font-bold shadow-lg">
+                <div className="inline-flex items-center space-x-2 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-slate-900 text-xs font-bold shadow-lg">
                   <Palette className="w-3 h-3" />
                   <span className="hidden sm:inline">{currentPage.category}</span>
                   <span className="sm:hidden">{currentPage.category.split(" ")[0]}</span>
@@ -229,15 +229,15 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
                 </button>
               </div>
 
-              {/* Browser Preview */}
-              <div className="flex items-center justify-center h-[280px] sm:h-[320px] lg:h-[380px] mt-12">
+              {/* Browser Preview - Tamanho otimizado */}
+              <div className="flex items-center justify-center h-[400px] lg:h-[500px] mt-12">
                 <div
                   className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 ${
-                    viewMode === "desktop" ? "w-full h-full" : "w-[280px] sm:w-[320px] h-[480px] sm:h-[568px]"
+                    viewMode === "desktop" ? "w-full h-full" : "w-[300px] h-[520px]"
                   }`}
                 >
                   {/* Browser Chrome */}
-                  <div className="bg-slate-200 px-3 py-2 flex items-center gap-2 border-b border-slate-300">
+                  <div className="bg-slate-200 px-3 py-1.5 flex items-center gap-2 border-b border-slate-300">
                     <div className="flex gap-1.5">
                       <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                       <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
@@ -254,7 +254,7 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
                     <iframe
                       src={`/landing/${currentPage.slug}`}
                       className="w-full border-0"
-                      style={{ height: "calc(100% - 32px)" }}
+                      style={{ height: "calc(100% - 28px)" }}
                       title={`Preview ${currentPage.title}`}
                       sandbox="allow-same-origin allow-scripts"
                       loading="lazy"
@@ -269,7 +269,7 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
                           {currentPage.preview}
                         </div>
                         <p className="text-slate-600 text-sm">Preview não disponível</p>
-                        <p className="text-slate-500 text-xs mt-2">Clique em "Ver Página Completa" abaixo</p>
+                        <p className="text-slate-500 text-xs mt-2">Clique em "Ver Página Completa"</p>
                       </div>
                     </div>
                   )}
@@ -277,17 +277,17 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
               </div>
             </section>
 
-            {/* Details Section */}
-            <section className="p-6 flex flex-col justify-between bg-gradient-to-br from-slate-800/80 to-slate-900/80">
-              <div className="space-y-4">
+            {/* Details Section - Mais compacto */}
+            <section className="p-5 flex flex-col justify-between bg-gradient-to-br from-slate-800/80 to-slate-900/80">
+              <div className="space-y-3">
                 {/* Title and Description */}
                 <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="text-3xl" role="img" aria-label={currentPage.category}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="text-2xl" role="img" aria-label={currentPage.category}>
                       {currentPage.preview}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h2 className="text-xl sm:text-2xl font-bold text-white mb-1 truncate">{currentPage.title}</h2>
+                      <h2 className="text-lg sm:text-xl font-bold text-white mb-0.5 truncate">{currentPage.title}</h2>
                       <div
                         className={`text-xs font-semibold bg-gradient-to-r ${currentPage.gradient} bg-clip-text text-transparent`}
                       >
@@ -295,28 +295,26 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
                       </div>
                     </div>
                   </div>
-                  <p className="text-slate-300 leading-relaxed text-sm">{currentPage.description}</p>
+                  <p className="text-slate-300 leading-relaxed text-xs">{currentPage.description}</p>
                 </div>
 
                 {/* Features */}
                 <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Eye className="w-4 h-4 text-purple-400" />
-                    <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                      Principais Features
-                    </h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Eye className="w-3 h-3 text-purple-400" />
+                    <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Features</h3>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="grid grid-cols-2 gap-1.5">
                     {currentPage.features.map((feature, index) => (
                       <div
                         key={index}
-                        className="flex items-center gap-2 p-2 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-all duration-300 group border border-slate-600/50"
+                        className="flex items-center gap-1.5 p-2 bg-slate-700/50 rounded-lg hover:bg-slate-700 transition-all duration-300 group border border-slate-600/50"
                       >
                         <div
-                          className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${currentPage.gradient} flex-shrink-0`}
+                          className={`w-1 h-1 rounded-full bg-gradient-to-r ${currentPage.gradient} flex-shrink-0`}
                           aria-hidden="true"
                         ></div>
-                        <span className="text-xs text-slate-300 group-hover:text-white transition-colors">
+                        <span className="text-xs text-slate-300 group-hover:text-white transition-colors leading-tight">
                           {feature}
                         </span>
                       </div>
@@ -326,21 +324,21 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
 
                 {/* Color Palette */}
                 <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Palette className="w-4 h-4 text-pink-400" />
-                    <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Paleta de Cores</h3>
+                  <div className="flex items-center gap-2 mb-2">
+                    <Palette className="w-3 h-3 text-pink-400" />
+                    <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Cores</h3>
                   </div>
-                  <div className="flex gap-2 flex-wrap">
+                  <div className="flex gap-2">
                     {currentPage.colors.map((color, index) => (
                       <div key={index} className="flex flex-col items-center gap-1">
                         <div
-                          className="w-10 h-10 rounded-lg shadow-lg border-2 border-slate-600 hover:scale-110 transition-transform cursor-pointer"
+                          className="w-8 h-8 rounded-lg shadow-lg border-2 border-slate-600 hover:scale-110 transition-transform cursor-pointer"
                           style={{ backgroundColor: color }}
                           role="img"
                           aria-label={`Cor ${color}`}
                           title={color}
                         ></div>
-                        <span className="text-[9px] text-slate-400 font-mono">{color}</span>
+                        <span className="text-[8px] text-slate-400 font-mono">{color}</span>
                       </div>
                     ))}
                   </div>
@@ -348,12 +346,12 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
               </div>
 
               {/* CTA Buttons */}
-              <div className="space-y-2 mt-4">
+              <div className="space-y-2 mt-3">
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl w-full text-sm"
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold px-4 py-2.5 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl w-full text-xs"
                   aria-label={`Solicitar landing page como ${currentPage.title} via WhatsApp`}
                 >
                   <MessageCircle className="w-4 h-4" aria-hidden="true" />
@@ -365,7 +363,7 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
                   href={`/landing/${currentPage.slug}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl border-2 border-slate-600 text-slate-300 hover:text-white hover:border-slate-400 hover:bg-slate-700/50 transition-all duration-300 w-full font-semibold text-sm"
+                  className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border-2 border-slate-600 text-slate-300 hover:text-white hover:border-slate-400 hover:bg-slate-700/50 transition-all duration-300 w-full font-semibold text-xs"
                   aria-label={`Ver página completa de ${currentPage.title}`}
                 >
                   <ExternalLink className="w-4 h-4" aria-hidden="true" />
@@ -375,15 +373,15 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
             </section>
           </div>
 
-          {/* Navigation Controls */}
+          {/* Navigation Controls - Mais compacto */}
           <nav
-            className="px-4 sm:px-8 py-4 border-t border-slate-700/50 bg-slate-900/50"
+            className="px-4 sm:px-8 py-3 border-t border-slate-700/50 bg-slate-900/50"
             aria-label="Navegação de landing pages"
           >
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-2">
               <button
                 onClick={prevPage}
-                className="flex items-center justify-center w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-xl transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center w-9 h-9 bg-slate-700 hover:bg-slate-600 rounded-xl transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Landing page anterior"
                 disabled={landingPages.length <= 1}
               >
@@ -394,14 +392,14 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
                 {/* Auto-play Toggle */}
                 <button
                   onClick={toggleAutoPlay}
-                  className="flex items-center justify-center w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-xl transition-all duration-300"
+                  className="flex items-center justify-center w-9 h-9 bg-slate-700 hover:bg-slate-600 rounded-xl transition-all duration-300"
                   aria-label={isAutoPlaying ? "Pausar rotação automática" : "Iniciar rotação automática"}
                   title={isAutoPlaying ? "Pausar (Espaço)" : "Reproduzir (Espaço)"}
                 >
                   {isAutoPlaying ? (
-                    <Pause className="w-5 h-5 text-slate-300" />
+                    <Pause className="w-4 h-4 text-slate-300" />
                   ) : (
-                    <Play className="w-5 h-5 text-slate-300" />
+                    <Play className="w-4 h-4 text-slate-300" />
                   )}
                 </button>
 
@@ -427,7 +425,7 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
 
               <button
                 onClick={nextPage}
-                className="flex items-center justify-center w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-xl transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center justify-center w-9 h-9 bg-slate-700 hover:bg-slate-600 rounded-xl transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Próxima landing page"
                 disabled={landingPages.length <= 1}
               >
@@ -442,9 +440,6 @@ const LandingPagesShowcase: React.FC<LandingPagesShowcaseProps> = ({
             </div>
           </nav>
         </div>
-
-        {/* Keyboard Shortcuts Help */}
-        
       </div>
 
       <style>{`

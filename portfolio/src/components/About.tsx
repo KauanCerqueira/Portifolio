@@ -126,26 +126,28 @@ const About: React.FC = () => {
           <div
             className={`space-y-5 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <div className="space-y-4 text-slate-600 leading-relaxed">
-              <p className="hover:text-slate-700 transition-colors duration-300">
-                Sou{" "}
-                <strong className="text-slate-900 relative inline-block group">
-                  Desenvolvedor Fullstack
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
-                </strong>{" "}
-                com foco em criar soluções que fazem a diferença. Especializado em{" "}
-                <strong className="text-slate-900">C#, .NET, React e IA</strong>.
-              </p>
-              <p className="hover:text-slate-700 transition-colors duration-300">
-                Atualmente na <strong className="text-slate-900">Crespo e Caires Advocacia</strong>, onde desenvolvo
-                automações e sistemas inteligentes que economizam tempo e dinheiro.
-              </p>
-              <p className="hover:text-slate-700 transition-colors duration-300">
-                Minhas soluções já geraram{" "}
-                <strong className="text-slate-900">redução significativa em tempo de análise</strong> e impacto positivo
-                em diversos projetos.
-              </p>
-            </div>
+                <div className="space-y-4 text-slate-600 leading-relaxed">
+        <p className="hover:text-slate-700 transition-colors duration-300">
+          Sou{" "}
+          <strong className="text-slate-900 relative inline-block group">
+            Desenvolvedor Fullstack
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
+          </strong>{" "}
+          com foco em criar soluções digitais que realmente fazem a diferença.
+          Especializado em{" "}
+          <strong className="text-slate-900">C#, .NET, React e Inteligência Artificial</strong>.
+        </p>
+        <p className="hover:text-slate-700 transition-colors duration-300">
+          Atuo como <strong className="text-slate-900">freelancer</strong>, desenvolvendo
+          automações, sistemas web e aplicações inteligentes que otimizam processos e aumentam a produtividade.
+        </p>
+        <p className="hover:text-slate-700 transition-colors duration-300">
+          Minhas soluções já proporcionaram{" "}
+          <strong className="text-slate-900">redução significativa de tempo</strong> e
+          resultados práticos em diferentes projetos e negócios.
+        </p>
+      </div>
+
 
             {/* Highlights */}
             <div className="grid grid-cols-2 gap-3">

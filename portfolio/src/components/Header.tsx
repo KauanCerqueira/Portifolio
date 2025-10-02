@@ -32,7 +32,6 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { name: "Serviços", href: "#servicos" },
-    { name: "Portfólio", href: "#portfolio" },
     { name: "Projetos", href: "#projetos" },
     { name: "Sobre", href: "#sobre" },
     { name: "Contato", href: "#contato" },
@@ -45,7 +44,7 @@ const Header: React.FC = () => {
       href: "https://www.linkedin.com/in/kauan-cerqueira-981a432b6/",
       label: "LinkedIn",
     },
-    { icon: <Instagram className="w-5 h-5" />, href: "https://instagram.com/seuperfil", label: "Instagram" },
+    { icon: <Instagram className="w-5 h-5" />, href: "https://www.instagram.com/kauancerqueira.dev/", label: "Instagram" },
   ]
 
   const scrollToSection = (href: string) => {
@@ -141,22 +140,22 @@ const Header: React.FC = () => {
               </div>
 
               <div className="w-px h-8 bg-slate-700/50" />
-
               <a
-                href="#contato"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollToSection("#contato")
-                }}
-                className={`relative inline-flex items-center justify-center space-x-2 font-bold rounded-xl transition-all duration-300 transform hover:scale-105 overflow-hidden group whitespace-nowrap ${
-                  isScrolled ? "px-4 py-2 text-sm" : "px-5 py-2.5 text-sm"
-                }`}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Mail className="relative z-10 text-white w-4 h-4" />
-                <span className="relative z-10 text-white">Contato</span>
-              </a>
+  href="#contato"
+  onClick={(e) => {
+    e.preventDefault()
+    scrollToSection("#contato")
+  }}
+  className={`relative inline-flex items-center justify-center gap-2 font-semibold rounded-full transition-all duration-300 transform hover:scale-105 overflow-hidden group ${
+    isScrolled ? "px-5 py-2 text-sm" : "px-6 py-3 text-base"
+  }`}
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300" />
+  <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  <Mail className="relative z-10 text-white w-5 h-5" />
+  <span className="relative z-10 text-white">Contato</span>
+</a>
+
             </div>
 
             {/* Botão Mobile */}

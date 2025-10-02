@@ -30,13 +30,8 @@ const Footer: React.FC = () => {
       label: 'LinkedIn'
     },
     {
-      icon: <Youtube className="w-5 h-5" />,
-      href: 'https://youtube.com/@seucanal',
-      label: 'YouTube'
-    },
-    {
       icon: <Instagram className="w-5 h-5" />,
-      href: 'https://instagram.com/seuperfil',
+      href: 'https://www.instagram.com/kauancerqueira.dev/',
       label: 'Instagram'
     }
   ];
