@@ -10,10 +10,10 @@ export function SecuritySection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const trustSignals = [
-    "clareza primeiro",
+    "foco em contato",
+    "sem processo de agência",
+    "mensagem organizada",
     "visual com função",
-    "menos dúvida",
-    "contato mais fácil",
   ];
 
   useEffect(() => {
@@ -39,16 +39,16 @@ export function SecuritySection() {
           >
             <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
               <span className="w-8 h-px bg-foreground/30" />
-              Confianca
+              Por que funciona
             </span>
           <h2 className="text-4xl lg:text-[4.4rem] font-display tracking-tight leading-[0.96] mb-7">
-              Uma página profissional
+              Não é sobre ter
               <br />
-              precisa passar segurança.
+              um site bonito.
             </h2>
             <p className="max-w-xl text-lg lg:text-[1.12rem] text-muted-foreground leading-relaxed mb-10">
-              A página não existe para impressionar só pelo design. Ela existe
-              para organizar a mensagem, aumentar a confiança e facilitar o contato.
+              Visual entra para dar peso à oferta. Estrutura entra para conduzir a
+              ação. O objetivo é facilitar a decisão e encurtar o caminho até o contato.
             </p>
 
             <div className="flex flex-wrap gap-3">

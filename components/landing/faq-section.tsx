@@ -5,29 +5,29 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "O que é uma landing page?",
+    question: "Isso substitui meu Instagram ou meu site?",
     answer:
-      "Uma landing page é uma página única, focada em um objetivo específico — no caso, levar o visitante a entrar em contato pelo WhatsApp. Diferente de um site completo, ela é direta e sem distrações.",
+      "Não. Essa página entra para organizar a decisão. Você pode continuar usando Instagram, anúncio, Google ou indicação. A diferença é que agora existe um lugar certo para mandar a pessoa quando ela demonstrar interesse.",
   },
   {
-    question: "Quanto tempo leva para ficar pronta?",
+    question: "Serve para negócio local e prestação de serviço?",
     answer:
-      "O processo é rápido. Após o alinhamento inicial, a maioria das páginas fica pronta entre 3 e 5 dias úteis. Dependendo da complexidade, pode ser ainda mais rápido.",
+      "Sim. A estrutura funciona especialmente bem para quem depende de clareza, confiança e contato rápido: serviços locais, profissionais autônomos, negócios de bairro e operações que usam WhatsApp como canal principal.",
   },
   {
-    question: "Preciso enviar tudo pronto?",
+    question: "Preciso chegar com texto e material prontos?",
     answer:
-      "Não. Você pode chegar com pouco material. Eu organizo a mensagem, ajusto o visual e deixo a página pronta para funcionar com o que você já tem.",
+      "Não. Você pode chegar com o básico. Eu organizo a mensagem principal, ajusto o visual e monto a página com o que fizer sentido para o seu caso.",
   },
   {
-    question: "A página funciona no celular?",
+    question: "Consigo usar em anúncio, perfil e indicação?",
     answer:
-      "Sim. Todas as páginas são responsivas e otimizadas para funcionar bem em qualquer dispositivo — celular, tablet ou computador.",
+      "Sim. A ideia é justamente ter um link direto para usar no perfil, em anúncio, no Google, na mensagem de WhatsApp, por indicação e onde mais você trouxer interesse.",
   },
   {
-    question: "Qual o investimento?",
+    question: "O que exatamente eu recebo?",
     answer:
-      "O valor atual é R$ 650 por página — condição especial por tempo limitado. Me chama no WhatsApp que eu te explico o que está incluído e a gente alinha os detalhes em poucos minutos.",
+      "Você recebe a página pronta para divulgar, com a mensagem principal organizada, visual ajustado ao negócio e botão direto para o WhatsApp.",
   },
 ];
 
@@ -106,16 +106,16 @@ export function FaqSection() {
         <div className="mb-14 lg:mb-18">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Dúvidas frequentes
+            Objeções comuns
           </span>
           <h2
             className={`text-4xl lg:text-5xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Perguntas sobre criação
+            O que as pessoas
             <br />
-            de landing pages
+            costumam travar antes de fechar
           </h2>
         </div>
 

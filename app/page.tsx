@@ -16,16 +16,16 @@ import { MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-x-hidden noise-overlay">
+    <main className="relative min-h-screen overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <FeaturesSection />
+      <TestimonialsSection />
       <HowItWorksSection />
       <IntegrationsSection />
       <InfrastructureSection />
       <MetricsSection />
       <SecuritySection />
-      <TestimonialsSection />
       <PricingSection />
       <FaqSection />
       <CtaSection />

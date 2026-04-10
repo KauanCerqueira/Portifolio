@@ -51,9 +51,9 @@ export function HowItWorksSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Criação de landing page direto ao ponto.
+            Estrutura pronta sem processo inchado.
             <br />
-            <span className="text-background/50">Pronta em até 5 dias. Sem agência.</span>
+            <span className="text-background/50">Você envia o básico. Eu viro página em até 5 dias.</span>
           </h2>
         </div>
 

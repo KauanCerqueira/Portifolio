@@ -10,16 +10,16 @@ export function PricingSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="max-w-3xl mb-20">
           <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase block mb-6">
-            Orçamento
+            Investimento
           </span>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-foreground mb-6">
-            Orçamento simples, direto
+            Investimento direto para
             <br />
-            <span className="text-stroke">e sem surpresa</span>
+            <span className="text-stroke">colocar sua estrutura no ar</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl">
-            Não é um projeto grande, nem um processo de agência. É uma página objetiva
-            com um orçamento alinhado ao que faz sentido para o seu negócio.
+            Não é pacote inchado nem processo de agência. É uma página
+            objetiva para parar de perder contato por falta de estrutura.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export function PricingSection() {
               <div className="flex items-center gap-3">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse shrink-0" />
                 <p className="text-sm font-medium text-foreground">
-                  Agenda restrita: reservo apenas 4 vagas semanais para manter os 5 dias de entrega.
+                  Agenda desta semana: 4 vagas para manter a entrega em até 5 dias úteis.
                 </p>
               </div>
             </div>
@@ -44,7 +44,7 @@ export function PricingSection() {
                 Página para negócios locais
               </h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Estrutura pensada para deixar tudo claro e facilitar o contato no WhatsApp.
+                Estrutura pensada para explicar sua oferta, aumentar percepção de valor e facilitar o contato no WhatsApp.
               </p>
             </div>
 
@@ -59,8 +59,8 @@ export function PricingSection() {
                   </span>
                 </div>
                 <p className="text-sm text-muted-foreground max-w-md">
-                  Página completa com estrutura pensada para transformar visita em
-                  conversa no WhatsApp. Valor promocional por tempo limitado.
+                  Valor para uma página completa, com mensagem principal, botão direto
+                  para WhatsApp e ajustes até aprovação.
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ export function PricingSection() {
               className="w-full sm:w-auto bg-foreground text-primary-foreground hover:bg-foreground/90 rounded-full h-12 px-6 group"
             >
               <a href={whatsappHref} target="_blank" rel="noreferrer">
-                Garantir esse valor no WhatsApp
+                Quero garantir essa vaga
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -81,7 +81,7 @@ export function PricingSection() {
               </p>
               <p className="text-[13px] text-muted-foreground flex items-center gap-1.5">
                 <Shield className="w-3.5 h-3.5" />
-                Garantia de satisfação: ajustes ilimitados até você aprovar.
+                Ajustes até você aprovar.
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export function PricingSection() {
             </ul>
 
             <p className="mt-12 text-sm text-muted-foreground">
-              Sem burocracia, sem excesso e sem precisar chegar com tudo pronto.
+              Sem burocracia, sem excesso e sem você precisar chegar com tudo pronto.
             </p>
           </div>
         </div>

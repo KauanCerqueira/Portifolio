@@ -9,9 +9,9 @@ export function JsonLd() {
     image: `${siteUrl}/eu.png`,
     jobTitle: "Web Designer",
     description:
-      "Criação de landing pages profissionais para negócios locais. Páginas diretas com foco em gerar contato no WhatsApp.",
+      "Criação de páginas profissionais para negócios locais. Páginas diretas com foco em gerar contato no WhatsApp.",
     knowsAbout: [
-      "Landing Pages",
+      "Páginas para gerar contato",
       "Web Design",
       "Criação de Sites",
       "UX Design",
@@ -23,28 +23,28 @@ export function JsonLd() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Kauan Cerqueira — Landing Pages",
+    name: "Kauan Cerqueira — Páginas para gerar contato",
     url: siteUrl,
     description:
-      "Criação de landing pages pensadas para negócios locais que querem transformar visitantes em conversas no WhatsApp.",
+      "Criação de páginas pensadas para negócios locais que querem transformar visitantes em conversas no WhatsApp.",
     provider: {
       "@type": "Person",
       name: "Kauan Cerqueira",
     },
-    serviceType: "Criação de Landing Pages",
+    serviceType: "Criação de páginas para gerar contato",
     areaServed: {
       "@type": "Country",
       name: "Brasil",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Landing Pages para Negócios Locais",
+      name: "Páginas para Negócios Locais",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Landing Page para Negócios Locais",
+            name: "Página para Negócios Locais",
             description:
               "Página pensada para gerar contato, com mensagem organizada, botão direto para WhatsApp e entrega simples.",
           },
@@ -59,7 +59,7 @@ export function JsonLd() {
     name: "Kauan Cerqueira",
     url: siteUrl,
     description:
-      "Criação de landing pages profissionais para negócios locais que geram contato no WhatsApp.",
+      "Criação de páginas profissionais para negócios locais que geram contato no WhatsApp.",
   };
 
   const faqSchema = {
@@ -68,10 +68,10 @@ export function JsonLd() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "O que é uma landing page?",
+        name: "O que é essa página?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Uma landing page é uma página única, focada em um objetivo específico — no caso, levar o visitante a entrar em contato pelo WhatsApp. Diferente de um site completo, ela é direta e sem distrações.",
+          text: "É uma página única, focada em um objetivo específico: levar o visitante a entrar em contato pelo WhatsApp. Diferente de um site completo, ela é direta e sem distrações.",
         },
       },
       {

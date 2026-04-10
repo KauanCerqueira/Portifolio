@@ -21,12 +21,12 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  kicker: "Atendendo poucos projetos por vez.",
-  titleTop: "Transforme visitas em",
-  titleBottomLead: "conversas no",
-  titleBottomAccent: "WhatsApp.",
+  kicker: "Poucos projetos por vez para manter o prazo.",
+  titleTop: "Seu negócio já recebe clique.",
+  titleBottomLead: "Falta virar",
+  titleBottomAccent: "contato.",
   subtitle:
-    "Páginas diretas para negócios locais que querem parar de perder cliente por falta de estrutura. Entrega em até 5 dias.",
+    "Páginas para negócios locais que precisam parar de perder cliente entre o clique e o WhatsApp. Estrutura clara, prova no ponto certo e botão direto para contato. Entrega em até 5 dias úteis.",
 };
 
 export const heroMedia = {
@@ -36,38 +36,38 @@ export const heroMedia = {
 };
 
 export const heroHighlights = [
-  "Mensagem clara",
-  "Visual profissional",
+  "Oferta entendida em segundos",
+  "Menos dúvida no WhatsApp",
+  "Mais valor antes do preço",
+  "Botão no lugar certo",
+  "Estrutura para perfil, anúncio e indicação",
   "Entrega em até 5 dias",
-  "Foco total em contato",
-  "Sem excesso de informação",
-  "Estrutura pronta para vender",
 ];
 
 export const benefitCards = [
   {
     number: "01",
-    title: "A pessoa entende rápido",
+    title: "A pessoa entra e não entende",
     description:
-      "Sua oferta aparece de forma simples e direta, sem deixar o visitante tentando adivinhar o que você faz.",
+      "Nos primeiros segundos ela tenta descobrir o que você faz, para quem faz sentido e por que deveria chamar. Se precisa pensar demais, ela sai.",
   },
   {
     number: "02",
-    title: "A página passa mais confiança",
+    title: "O WhatsApp recebe lead frio",
     description:
-      "Quando a mensagem está organizada e o visual está limpo, o negócio parece mais sério e mais preparado.",
+      "Quando a página não prepara a decisão, a conversa começa do zero: pergunta básica, comparação por preço e pouca convicção.",
   },
   {
     number: "03",
-    title: "O caminho fica curto",
+    title: "Seu serviço parece menor",
     description:
-      "A página não tenta fazer tudo. Ela leva a pessoa ao que importa: entrar em contato com você.",
+      "Mesmo com um bom trabalho por trás, a percepção cai quando a oferta está mal apresentada e sem uma mensagem que sustente valor.",
   },
   {
     number: "04",
-    title: "O processo continua simples",
+    title: "Mais tráfego não corrige isso",
     description:
-      "Não precisa de uma estrutura complexa, nem de um site gigante. A ideia é ter uma página que funcione.",
+      "Sem estrutura, colocar mais gente para visitar só aumenta o vazamento entre interesse e contato.",
   },
 ];
 
@@ -75,9 +75,9 @@ export const processSteps = [
   {
     eyebrow: "Você manda",
     number: "I",
-    title: "Você me passa o básico",
+    title: "Você me passa o mínimo necessário",
     description:
-      "Informações do negócio, serviço principal, cidade, WhatsApp e qualquer referência que você já tenha.",
+      "Informações do negócio, serviço principal, cidade, WhatsApp e qualquer referência que já exista.",
     preview: [
       "Nome do negócio",
       "Serviço principal",
@@ -87,79 +87,79 @@ export const processSteps = [
   {
     eyebrow: "Eu organizo",
     number: "II",
-    title: "Eu organizo a página",
+    title: "Eu monto a estrutura de venda",
     description:
-      "Eu organizo a mensagem, ajusto o visual e deixo a página pronta para levar a pessoa até o contato.",
+      "Eu organizo a mensagem, ajusto o visual e deixo a página pronta para explicar a oferta, gerar confiança e levar ao contato.",
     preview: [
-      "Mensagem principal",
-      "Visual organizado",
+      "Copy principal",
+      "Visual com função",
       "Botão para conversa",
     ],
   },
   {
     eyebrow: "Você recebe",
     number: "III",
-    title: "Você recebe pronta para usar",
+    title: "Você recebe pronta para divulgar",
     description:
-      "Em até 5 dias úteis, sua página está no ar. Sem processo longo, sem burocracia e sem mil etapas de revisão.",
+      "Em até 5 dias úteis, sua página fica no ar. Link pronto para usar no perfil, em anúncio, por indicação ou na própria conversa.",
     preview: [
       "Página publicada",
-      "Link pronto para divulgar",
-      "Botão no WhatsApp",
+      "Link pronto para enviar",
+      "WhatsApp conectado",
     ],
   },
 ];
 
 export const structureContent = {
   kicker: "Estrutura",
-  title: "Uma página enxuta, feita para a pessoa entender rápido, confiar em você e dar o próximo passo no WhatsApp.",
+  title: "Uma página boa não enfeita. Ela conduz a decisão.",
   description:
-    "Sem excesso. Sem distração. Só o que ajuda a transformar visita em conversa.",
+    "Cada bloco precisa empurrar a decisão: entender, confiar e chamar.",
   note:
-    "Sem seção só para preencher. Cada bloco precisa ajudar a entender, confiar e chamar.",
+    "Se a seção não ajuda a gerar contato, ela não entra.",
 };
 
 export const structureItems = [
   {
-    label: "Oferta clara",
+    label: "Oferta entendida rápido",
     detail:
-      "A pessoa precisa bater o olho e entender o que você faz, para quem faz e por que vale a pena falar com você.",
+      "A pessoa precisa bater o olho e entender o que você faz, para quem faz sentido e qual problema você resolve.",
   },
   {
-    label: "Benefícios visíveis",
+    label: "Valor antes do preço",
     detail:
-      "Motivos simples e diretos para continuar na página, perceber valor e querer saber mais.",
+      "A página precisa mostrar por que vale a conversa antes de empurrar a pessoa para comparar só por preço.",
   },
   {
-    label: "Prova ou confiança",
+    label: "Prova no ponto certo",
     detail:
-      "Elementos reais que aumentam a confiança mais rápido, como experiência, posicionamento, diferenciais ou resultados.",
+      "Depoimento, exemplo, contexto ou sinal de autoridade entram para reduzir desconfiança antes do clique no WhatsApp.",
   },
   {
-    label: "Botão para WhatsApp",
+    label: "Próximo passo fácil de seguir",
     detail:
-      "Um próximo passo claro, simples e fácil de seguir para transformar interesse em contato.",
+      "Um próximo passo simples, visível e natural para transformar interesse em contato.",
   },
 ];
 
 export const exampleSectionContent = {
-  kicker: "Páginas",
-  title: "Veja a página inteira, não só o começo.",
+  kicker: "Estruturas",
+  title: "Veja como a oferta pode ser organizada.",
   description:
-    "Aqui a ideia é mostrar composição, ritmo visual e caminho até o contato de um jeito mais real, no computador e no celular.",
+    "Aqui eu não mostro só visual. Mostro o tipo de página que segura a leitura, valoriza a oferta e conduz o contato no computador e no celular.",
 };
 
 export const exampleCards = [
   {
     slug: "corrida",
     name: "Clube de corrida",
-    objective: "Uma página mais energética, com senso de comunidade, abertura forte e chamada clara para participar.",
+    objective: "Demonstração de uma estrutura mais energética, feita para explicar rápido a proposta e levar a pessoa para participar sem fricção.",
     tags: ["visual escuro", "comunidade", "chamada forte"],
-    status: "Projeto ao vivo",
+    status: "Demonstração",
     notes: [
-      "Abertura forte para chamar atenção logo no início.",
-      "Ritmo visual pensado para segurar a leitura por mais tempo.",
-      "Chamada clara para entrar ou participar sem confusão.",
+      "Abertura pensada para a pessoa decidir rápido se faz sentido continuar.",
+      "A leitura vai tirando dúvida e mantendo a atenção no próximo passo.",
+      "O botão aparece de forma clara sem disputar atenção com excesso de informação.",
     ],
     liveHref: "https://template-corrida-v1.vercel.app/",
     screenshotSrc: null,
@@ -168,13 +168,13 @@ export const exampleCards = [
   {
     slug: "lucy-hair",
     name: "Salão de beleza premium",
-    objective: "Uma página com pegada editorial, vitrine de serviços e chamada direta para agendamento no WhatsApp.",
+    objective: "Exemplo de estrutura para serviço local que precisa passar valor antes do agendamento e encurtar a decisão no WhatsApp.",
     tags: ["visual premium", "vitrine de serviços", "WhatsApp direto"],
-    status: "Projeto ao vivo",
+    status: "Página publicada",
     notes: [
-      "Abertura com foto forte e tipografia limpa para passar valor logo no primeiro bloco.",
-      "Estrutura de catálogo ajuda a navegar entre tratamentos sem perder o foco comercial.",
-      "WhatsApp, telefone e localização aparecem em vários pontos para encurtar a decisão.",
+      "Abertura forte para elevar percepção de valor logo no primeiro bloco.",
+      "Os serviços ficam organizados sem roubar o foco do objetivo comercial.",
+      "WhatsApp e informações de contato reaparecem nos pontos em que a decisão costuma travar.",
     ],
     liveHref: "https://template-premium-ecomerce-verde.vercel.app/",
     screenshotSrc: null,
@@ -183,13 +183,13 @@ export const exampleCards = [
   {
     slug: "advocacia-empresarial",
     name: "Advocacia empresarial",
-    objective: "Uma página mais institucional, com visual corporativo, especialidades bem organizadas e chamada direta para uma primeira conversa no WhatsApp.",
+    objective: "Demonstração de uma estrutura mais institucional, com foco em transmitir segurança, organizar especialidades e abrir uma primeira conversa.",
     tags: ["visual corporativo", "mais confiança", "WhatsApp direto"],
-    status: "Projeto ao vivo",
+    status: "Demonstração",
     notes: [
-      "Abertura mais sóbria para transmitir segurança e confiança logo no primeiro bloco.",
-      "As especialidades aparecem segmentadas para facilitar a leitura e deixar a estrutura mais consultiva.",
-      "Chamadas para uma primeira conversa no WhatsApp reaparecem em pontos estratégicos para encurtar a decisão.",
+      "Abertura mais sóbria para aumentar confiança logo nos primeiros segundos.",
+      "As especialidades entram segmentadas para reduzir dúvida e facilitar a leitura.",
+      "As chamadas para conversar reaparecem onde a decisão tende a esfriar.",
     ],
     liveHref: "https://template-advogado-beta.vercel.app/",
     screenshotSrc: null,
@@ -229,69 +229,69 @@ export const exampleCards = [
 
 export const resultsSectionContent = {
   kicker: "O que muda",
-  titleTop: "Quando a página orienta,",
-  titleBottom: "a decisão fica mais fácil.",
+  titleTop: "A pessoa chega menos",
+  titleBottom: "crua no WhatsApp.",
   description:
-    "Sem prometer número inventado. A ideia aqui é mostrar o que melhora na prática: menos dúvida, mais confiança e conversas melhores no WhatsApp.",
-  highlightLabel: "Na prática",
+    "Isso não substitui um bom serviço. Mas muda a qualidade da conversa: menos dúvida básica, mais contexto e mais chance de avançar.",
+  highlightLabel: "Resultado percebido",
   highlightTitle:
-    "Páginas entregues para negócios reais que precisavam organizar a mensagem e facilitar o contato no WhatsApp.",
+    "Quando a página faz o trabalho inicial, você para de explicar o básico toda vez.",
   highlightDescription:
-    "Isso não substitui um bom serviço, mas melhora muito a forma como ele é percebido antes da conversa.",
+    "O cliente entende melhor a oferta, compara menos no raso e chega com mais intenção para conversar.",
 };
 
 export const resultPillars = [
   {
-    title: "Clareza imediata",
+    title: "Menos dúvida repetida",
     description:
-      "Quem entra entende mais rápido o que você faz, para quem faz sentido e qual é o próximo passo.",
+      "A página responde antes as perguntas que hoje você precisa repetir por mensagem ou no WhatsApp.",
   },
   {
-    title: "Mais confiança",
+    title: "Mais valor percebido",
     description:
-      "Uma mensagem bem organizada faz o negócio parecer mais sério e mais preparado antes mesmo do contato.",
+      "A oferta chega mais bem apresentada, e isso muda o jeito como a pessoa enxerga seu serviço antes de falar com você.",
   },
   {
-    title: "Leitura guiada",
+    title: "Decisão mais curta",
     description:
-      "A página reduz distração, conduz a atenção e leva a pessoa até um único caminho de ação.",
+      "A leitura reduz fricção e encurta a distância entre interesse e ação.",
   },
   {
-    title: "Contato melhor",
+    title: "Contato mais qualificado",
     description:
-      "O WhatsApp recebe pessoas com menos dúvida básica e com mais contexto sobre o que elas querem.",
+      "O WhatsApp passa a receber gente com mais contexto, menos curiosidade solta e mais intenção real.",
   },
 ];
 
 export const trustPillars = [
   {
-    title: "Mensagem que orienta",
+    title: "Direto com quem faz",
     description:
-      "A pessoa entende o essencial mais rápido, sem precisar interpretar demais para saber se faz sentido.",
+      "Você fala comigo do início ao fim. Sem repasse, sem camada de agência e sem processo inchado.",
   },
   {
-    title: "Visual que transmite cuidado",
+    title: "Estrutura pensada para ação",
     description:
-      "O acabamento certo faz o negócio parecer mais sério e mais confiável logo nos primeiros segundos.",
+      "A página não tenta fazer tudo. Ela existe para levar o visitante a um próximo passo claro.",
   },
   {
-    title: "Oferta que faz sentido",
+    title: "Copy clara e comercial",
     description:
-      "A proposta aparece com mais contexto e menos ruído, deixando a decisão mais fácil.",
+      "O texto organiza a oferta, reduz dúvida e aumenta a percepção de valor antes do contato.",
   },
   {
-    title: "Contato fácil de seguir",
+    title: "Pronta para divulgar",
     description:
-      "O WhatsApp aparece no momento certo, com um próximo passo claro e sem travar a decisão.",
+      "Você recebe um link enxuto para usar no perfil, em anúncio, no Google, por indicação ou na própria conversa.",
   },
 ];
 
 export const pricingIncludes = [
-  "Página pensada para gerar contato",
+  "Página com foco em gerar contato",
   "Mensagem organizada para o seu negócio",
-  "Botão levando direto para o WhatsApp",
-  "Estrutura pronta para receber prova real depois",
-  "Entrega simples, sem processo longo",
+  "Botão direto para o WhatsApp",
+  "Estrutura pronta para receber prova e ajustes",
+  "Entrega sem processo longo e sem burocracia",
 ];
 
 export const footerLinks = [

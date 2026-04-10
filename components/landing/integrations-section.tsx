@@ -218,7 +218,13 @@ export function IntegrationsSection() {
 
           <div className="grid gap-5 px-4 py-5 sm:gap-8 sm:px-6 sm:py-6 lg:grid-cols-[minmax(0,1.15fr)_360px] lg:items-start lg:gap-10 lg:px-8 lg:py-8">
             <div className="min-w-0 lg:order-1 lg:self-start">
-              <LivePreview href={activeExample.liveHref} label="preview ao vivo" mode={mode} />
+              {isVisible ? (
+                <LivePreview href={activeExample.liveHref} label="estrutura em tela" mode={mode} />
+              ) : (
+                <div className="flex min-h-[320px] items-center justify-center rounded-[1.5rem] border border-foreground/10 bg-foreground/[0.02] p-6 text-center text-sm text-muted-foreground shadow-[0_18px_60px_rgba(0,0,0,0.08)]">
+                  A visualização ao vivo carrega quando esta seção entra na tela.
+                </div>
+              )}
             </div>
 
             <div className="flex flex-col lg:order-2">
@@ -256,7 +262,7 @@ export function IntegrationsSection() {
                   className="h-12 rounded-full bg-foreground px-6 text-background hover:bg-foreground/90"
                 >
                   <a href={activeExample.liveHref} target="_blank" rel="noreferrer">
-                    Ver ao vivo
+                    Abrir demonstração
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </a>
                 </Button>

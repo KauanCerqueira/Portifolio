@@ -1,22 +1,40 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { brand, footerLinks, whatsappHref, whatsappNumberDisplay } from "@/lib/landing-content";
 import { AnimatedWave } from "./animated-wave";
 
 export function FooterSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const footerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (footerRef.current) observer.observe(footerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className="relative border-t border-foreground/10">
-      <div className="absolute inset-0 h-64 opacity-20 pointer-events-none overflow-hidden">
-        <AnimatedWave />
-      </div>
+    <footer ref={footerRef} className="relative border-t border-foreground/10">
+      {isVisible ? (
+        <div className="absolute inset-0 h-64 opacity-20 pointer-events-none overflow-hidden">
+          <AnimatedWave />
+        </div>
+      ) : null}
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="py-16 lg:py-24">
           <div className="grid lg:grid-cols-[1.4fr_1fr_1fr] gap-12 lg:gap-8">
             <div>
               <a href="#" className="inline-flex items-center gap-3 mb-6">
-                <img src="/k-logo.svg" alt="Kauan Cerqueira — Web designer especializado em landing pages" className="w-12 h-12 rounded-md" />
+                <img src="/k-logo.svg" alt="Kauan Cerqueira — Web designer especializado em páginas para gerar contato" className="w-12 h-12 rounded-md" />
                 <div>
                   <span className="block text-2xl font-display">{brand.name}</span>
                   <span className="text-xs uppercase tracking-[0.24em] text-muted-foreground font-mono">

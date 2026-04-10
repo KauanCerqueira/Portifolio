@@ -37,7 +37,7 @@ export function Navigation() {
           aria-hidden="true"
           className={`pointer-events-none absolute inset-0 rounded-2xl transition-all duration-500 ${
             hasNavSurface
-              ? "opacity-100 bg-background/85 backdrop-blur-xl border border-foreground/10 shadow-lg"
+              ? "opacity-100 bg-background/92 border border-foreground/10 shadow-lg"
               : "opacity-0 border border-transparent shadow-none"
           }`}
         />

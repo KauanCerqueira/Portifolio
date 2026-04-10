@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Kauan Cerqueira — Criação de landing pages que geram contato no WhatsApp";
+export const alt = "Kauan Cerqueira — Criação de páginas que geram contato no WhatsApp";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -51,7 +51,7 @@ export default function OgImage() {
               maxWidth: "900px",
             }}
           >
-            Landing pages que geram contato no WhatsApp.
+            Páginas que geram contato no WhatsApp.
           </div>
           <div
             style={{

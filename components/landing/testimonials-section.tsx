@@ -5,21 +5,21 @@ import { useEffect, useRef, useState } from "react";
 const testimonials = [
   {
     quote:
-      "Kauan, subimos a página ontem e hoje de manhã já recebi dois contatos no WhatsApp que vieram direto dela. Diferença absurda de tentar explicar pelo Instagram.",
+      "Subimos a página e no dia seguinte já apareceu contato vindo direto dela. A maior diferença foi parar de explicar tudo pelo Instagram antes da pessoa chamar.",
     name: "Lucas Ferreira",
-    role: "Barbearia — Campinas, SP",
+    role: "Barbearia | Campinas, SP",
   },
   {
     quote:
-      "Achei que ia dar um trabalhão, mas foi muito rápido. Mandar o link agora ficou muito mais profissional, o cliente já cai no meu número sabendo o que quer do treino.",
+      "Achei que ia dar trabalho, mas foi rápido. Agora eu mando um link que passa muito mais profissionalismo e o cliente já chega no WhatsApp entendendo melhor o treino.",
     name: "Camila Rodrigues",
-    role: "Personal trainer — Valinhos, SP",
+    role: "Personal trainer | Valinhos, SP",
   },
   {
     quote:
-      "Meu orçamento agora é passado com muito mais moral. Ninguém mais fica barganhando preço básico porque a página já passa o valor antes da pessoa me chamar.",
+      "Meu orçamento hoje é passado com muito mais moral. A página já prepara o valor antes da conversa e isso diminuiu muito a barganha logo de cara.",
     name: "Rafael Mendes",
-    role: "Reformas e acabamentos — Sumaré, SP",
+    role: "Reformas e acabamentos | Sumaré, SP",
   },
 ];
 
@@ -48,16 +48,16 @@ export function TestimonialsSection() {
         <div className="mb-14 lg:mb-18">
           <span className="inline-flex items-center gap-3 text-sm font-mono text-muted-foreground mb-6">
             <span className="w-8 h-px bg-foreground/30" />
-            Quem já usou
+            Prova
           </span>
           <h2
             className={`text-4xl lg:text-5xl font-display tracking-tight transition-all duration-700 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Negócios reais,
+            O que muda aparece
             <br />
-            resultados diretos.
+            na conversa.
           </h2>
         </div>
 

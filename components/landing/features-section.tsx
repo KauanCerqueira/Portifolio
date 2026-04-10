@@ -56,17 +56,17 @@ export function FeaturesSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Aparecer não basta.
+            O clique chega.
             <br />
-            Sua landing page precisa converter.
+            O contato não.
           </h2>
           <p
             className={`text-xl text-muted-foreground leading-relaxed transition-all duration-700 delay-100 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Hoje muita empresa até chama atenção no Google ou no Instagram, mas não
-            tem uma estrutura clara para transformar essa visita em conversa.
+            Instagram, Google, indicação e anúncio podem trazer gente. Mas se a
+            pessoa cai numa estrutura fraca, ela sai com dúvida ou some sem chamar.
           </p>
         </div>
 

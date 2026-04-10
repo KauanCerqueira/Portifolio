@@ -91,11 +91,6 @@
   html {
     scroll-behavior: smooth;
   }
-  @media (pointer: fine) {
-    *, *::before, *::after {
-      cursor: none !important;
-    }
-  }
 }
 
 @layer utilities {

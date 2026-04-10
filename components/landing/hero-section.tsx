@@ -5,59 +5,42 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { heroContent, heroHighlights, heroMedia, whatsappHref } from "@/lib/landing-content";
 
-async function assetExists(path?: string | null) {
-  if (!path) return false;
-
-  try {
-    const response = await fetch(path, { method: "HEAD" });
-    return response.ok;
-  } catch {
-    return false;
-  }
-}
-
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  const [videoSrc, setVideoSrc] = useState<string | null>(null);
-  const [hasPoster, setHasPoster] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [isVideoReady, setIsVideoReady] = useState(false);
+  const hasPoster = Boolean(heroMedia.poster);
+  const videoSrc = shouldLoadVideo ? heroMedia.webm ?? heroMedia.mp4 ?? null : null;
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const connection = (
+      navigator as Navigator & {
+        connection?: {
+          saveData?: boolean;
+          effectiveType?: string;
+        };
+      }
+    ).connection;
 
-    updatePreference();
-    mediaQuery.addEventListener("change", updatePreference);
+    const syncVideoState = () => {
+      const saveData = Boolean(connection?.saveData);
+      const slowConnection = connection?.effectiveType === "slow-2g" || connection?.effectiveType === "2g";
+      const allowVideo = !motionQuery.matches && !saveData && !slowConnection;
 
-    return () => mediaQuery.removeEventListener("change", updatePreference);
-  }, []);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const resolveHeroMedia = async () => {
-      const [posterAvailable, webmAvailable, mp4Available] = await Promise.all([
-        assetExists(heroMedia.poster),
-        assetExists(heroMedia.webm),
-        assetExists(heroMedia.mp4),
-      ]);
-
-      if (!isMounted) return;
-
-      setHasPoster(posterAvailable);
-      setVideoSrc(webmAvailable ? heroMedia.webm : mp4Available ? heroMedia.mp4 : null);
+      setShouldLoadVideo(allowVideo && Boolean(heroMedia.webm ?? heroMedia.mp4));
       setIsVideoReady(false);
     };
 
-    resolveHeroMedia();
+    syncVideoState();
+    motionQuery.addEventListener("change", syncVideoState);
 
     return () => {
-      isMounted = false;
+      motionQuery.removeEventListener("change", syncVideoState);
     };
   }, []);
 
@@ -75,7 +58,7 @@ export function HeroSection() {
                 : undefined
             }
           >
-            {videoSrc && !prefersReducedMotion ? (
+            {videoSrc ? (
               <video
                 key={videoSrc}
                 className={`hero-video-full ${isVideoReady ? "hero-cinema-video-visible" : ""}`}
@@ -94,10 +77,9 @@ export function HeroSection() {
             ) : null}
             <div className="hero-video-overlay absolute inset-0" />
             <div className="hero-video-vignette absolute inset-0" />
-            <div className="hero-video-sheen absolute inset-0" />
           </div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(52%_46%_at_76%_30%,rgba(246,244,241,0.08),transparent_56%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(52%_46%_at_76%_30%,rgba(246,244,241,0.06),transparent_56%)]" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-background/14" />
       </div>
 
@@ -190,7 +172,7 @@ export function HeroSection() {
               className="bg-background hover:bg-background/88 text-foreground px-8 h-14 text-base rounded-full group shadow-[0_18px_40px_rgba(0,0,0,0.24)]"
             >
               <a href={whatsappHref} target="_blank" rel="noreferrer">
-                Chamar no WhatsApp
+                Quero ver no meu negócio
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -200,7 +182,7 @@ export function HeroSection() {
               variant="outline"
               className="h-14 px-8 text-base rounded-full border-background/18 bg-background/[0.05] text-background hover:bg-background/[0.12] hover:text-background"
             >
-              <a href="#how-it-works">Ver como funciona</a>
+              <a href="#how-it-works">Entender como funciona</a>
             </Button>
           </div>
 
@@ -211,10 +193,10 @@ export function HeroSection() {
           >
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              Páginas focadas em conversão
+              Estrutura para gerar contato
             </span>
             <span className="hidden sm:inline h-3 w-px bg-background/20" />
-            <span>Entrega em até 5 dias</span>
+            <span>Entrega em até 5 dias úteis</span>
           </div>
 
           <div
@@ -222,8 +204,8 @@ export function HeroSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-background/58 animate-pulse" />
-            Agenda limitada — poucos projetos por vez
+            <span className="w-2 h-2 rounded-full bg-background/58" />
+            4 vagas por semana para manter o prazo
           </div>
         </div>
 
@@ -235,7 +217,7 @@ export function HeroSection() {
         }`}
       >
         <div className="hero-marquee-track">
-          <div className="hero-marquee-strip marquee whitespace-nowrap">
+          <div className="hero-marquee-strip whitespace-nowrap">
             {[...Array(3)].map((_, setIndex) => (
               <div key={setIndex} className="hero-marquee-group">
                 {heroHighlights.map((highlight) => (
