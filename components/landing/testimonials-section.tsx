@@ -2,46 +2,49 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { whatsappHref } from "@/lib/landing-content";
 
 const testimonials = [
   {
-    badge: "Resultado rapido",
-    headline: "Pagina no ar, conversa no mesmo dia.",
+    badge: "Resultado rápido",
+    headline: "Subiu ontem. Hoje já tem gente chamando.",
     summary:
-      "Subiu a noite. Na manha seguinte ja vieram 4 pessoas no WhatsApp e 2 matriculas fecharam.",
-    proof: "Prova que a estrutura encurta a distancia entre clique, conversa e fechamento.",
+      "A página entrou no ar e, na manhã seguinte, já tinha conversa chegando no WhatsApp.",
+    proof: "Oferta clara encurta a distância entre clique e contato.",
     name: "Ricardo",
     role: "CT de Treinamento",
     imageSrc: "/prints/3.jpeg",
     imageWidth: 1080,
     imageHeight: 1062,
-    alt: "Conversa no WhatsApp com Ricardo dizendo que a pagina subiu ontem, vieram quatro pessoas e ele fechou duas matriculas.",
+    alt: "Conversa no WhatsApp com Ricardo dizendo que a página subiu ontem, vieram quatro pessoas e ele fechou duas matrículas.",
   },
   {
     badge: "Processo leve",
-    headline: "Sem agencia, sem novela de reuniao.",
+    headline: "Sem agência. Sem processo arrastado.",
     summary:
-      "Tudo foi resolvido com um audio e algumas fotos. Sem arrastar briefing nem aprovacao.",
-    proof: "Prova que a entrega parece leve para quem nao quer virar refem de processo.",
+      "Tudo foi resolvido com um áudio e algumas fotos. Rápido, direto e sem tomar o tempo da cliente.",
+    proof: "A praticidade da entrega também aumenta a percepção de valor.",
     name: "Dra. Ana Paula",
-    role: "Clinica",
+    role: "Clínica",
     imageSrc: "/prints/2.jpeg",
     imageWidth: 1080,
     imageHeight: 1237,
-    alt: "Conversa no WhatsApp com Dra. Ana Paula elogiando o processo leve e dizendo que resolveu tudo com um audio e fotos.",
+    alt: "Conversa no WhatsApp com Dra. Ana Paula elogiando o processo leve e dizendo que resolveu tudo com um áudio e fotos.",
   },
   {
     badge: "Lead mais qualificado",
-    headline: "Menos curioso solto no WhatsApp.",
+    headline: "Menos curioso. Mais conversa pronta.",
     summary:
-      "As pessoas chegaram sabendo preco, entendendo a oferta e consumindo menos tempo do atendimento.",
-    proof: "Prova que a pagina nao gera so mensagem. Ela melhora a qualidade da conversa.",
+      "As pessoas chegaram entendendo melhor a oferta, com menos dúvida básica e mais intenção.",
+    proof: "A página não gera só mensagem. Ela melhora a qualidade do contato.",
     name: "Marcos",
-    role: "Estetica Automotiva",
+    role: "Estética Automotiva",
     imageSrc: "/prints/1.jpeg",
     imageWidth: 1080,
     imageHeight: 1028,
-    alt: "Conversa no WhatsApp com Marcos dizendo que agora as pessoas chegam sabendo o preco e o que a empresa faz.",
+    alt: "Conversa no WhatsApp com Marcos dizendo que agora as pessoas chegam sabendo o preço e o que a empresa faz.",
   },
 ];
 
@@ -65,32 +68,31 @@ export function TestimonialsSection() {
     <section
       id="proof"
       ref={sectionRef}
-      className="relative border-y border-foreground/10 py-20 lg:py-24"
+      className="relative border-y border-foreground/10 py-18 lg:py-22"
     >
       <div
         aria-hidden
         className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(41,43,45,0.24),transparent)]"
       />
 
-      <div className="mx-auto max-w-[1320px] px-6 lg:px-12">
+      <div className="mx-auto max-w-[1280px] px-6 lg:px-12">
         <div
-          className={`mb-12 max-w-3xl transition-all duration-700 lg:mb-14 ${
+          className={`mb-10 max-w-3xl transition-all duration-700 lg:mb-12 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <span className="mb-5 inline-flex items-center gap-3 text-xs font-mono text-muted-foreground">
+          <span className="mb-4 inline-flex items-center gap-3 text-[11px] font-mono uppercase tracking-[0.24em] text-muted-foreground">
             <span className="h-px w-8 bg-foreground/30" />
-            Feedback no WhatsApp
+            Prova real
           </span>
-          <h2 className="text-[2.35rem] font-display leading-[0.96] tracking-tight lg:text-[4.25rem]">
-            A prova nao esta no layout.
+          <h2 className="text-[2rem] font-display leading-[0.96] tracking-tight lg:text-[3.55rem]">
+            A prova não está no layout.
             <br />
-            Esta no WhatsApp.
+            Está no WhatsApp.
           </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground lg:text-[1.05rem]">
-            Antes do preco, a prova precisa bater o olho e parecer real. Os 3
-            prints abaixo quebram, em sequencia, as duvidas de resultado,
-            esforco e qualidade do lead.
+          <p className="mt-4 max-w-2xl text-[0.98rem] leading-relaxed text-muted-foreground lg:text-[1.02rem]">
+            Quando a página está certa, o WhatsApp muda: menos curioso, mais
+            contexto e mais intenção de compra.
           </p>
         </div>
 
@@ -98,7 +100,7 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <article
               key={testimonial.name}
-              className={`flex h-full flex-col bg-background p-5 transition-all duration-700 sm:p-6 lg:p-7 ${
+              className={`flex h-full flex-col bg-background p-5 transition-all duration-700 sm:p-6 ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
               style={{ transitionDelay: `${index * 90}ms` }}
@@ -113,43 +115,68 @@ export function TestimonialsSection() {
                 </span>
               </div>
 
-              <div className="mt-5 rounded-[1.45rem] border border-foreground/10 bg-[#ebe6de] p-2 sm:p-3">
-                <div className="h-[320px] overflow-hidden rounded-[1rem] sm:h-[360px] lg:h-[300px] xl:h-[340px]">
+              <div className="mt-4 rounded-[1.35rem] border border-foreground/10 bg-[#ebe6de] p-2 sm:p-3">
+                <div className="h-[250px] overflow-hidden rounded-[0.95rem] sm:h-[285px] lg:h-[240px] xl:h-[280px]">
                   <Image
                     src={testimonial.imageSrc}
                     alt={testimonial.alt}
                     width={testimonial.imageWidth}
                     height={testimonial.imageHeight}
-                    className="h-full w-full rounded-[1rem] object-cover object-top"
+                    className="h-full w-full rounded-[0.95rem] object-cover object-top"
                     priority={index === 0}
                   />
                 </div>
               </div>
 
-              <div className="mt-6 flex flex-1 flex-col">
-                <p className="text-[11px] font-mono uppercase tracking-[0.24em] text-muted-foreground">
-                  {testimonial.name} . {testimonial.role}
+              <div className="mt-5 flex flex-1 flex-col">
+                <p className="text-[10px] font-mono uppercase tracking-[0.24em] text-muted-foreground sm:text-[11px]">
+                  {testimonial.name} · {testimonial.role}
                 </p>
-                <div className="lg:min-h-[188px]">
-                  <h3 className="mt-4 text-balance text-[1.85rem] font-display leading-[0.98] tracking-tight text-foreground">
+
+                <div className="lg:min-h-[132px]">
+                  <h3 className="mt-3 text-balance text-[1.55rem] font-display leading-[0.98] tracking-tight text-foreground lg:text-[1.75rem]">
                     {testimonial.headline}
                   </h3>
-                  <p className="mt-4 text-[0.98rem] leading-relaxed text-muted-foreground">
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {testimonial.summary}
                   </p>
                 </div>
 
-                <div className="mt-6 border-t border-foreground/10 pt-5">
-                  <p className="text-[11px] font-mono uppercase tracking-[0.24em] text-muted-foreground">
-                    O que isso prova
+                <div className="mt-5 border-t border-foreground/10 pt-4">
+                  <p className="text-[10px] font-mono uppercase tracking-[0.24em] text-muted-foreground sm:text-[11px]">
+                    Leitura comercial
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-foreground/82">
+                  <p className="mt-2 text-sm leading-relaxed text-foreground/82">
                     {testimonial.proof}
                   </p>
                 </div>
               </div>
             </article>
           ))}
+        </div>
+
+        <div
+          className={`border-x border-b border-foreground/10 bg-background px-5 py-5 transition-all duration-700 sm:px-6 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+          style={{ transitionDelay: "300ms" }}
+        >
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <p className="max-w-3xl text-[1.15rem] font-display leading-[1.08] tracking-tight text-foreground lg:text-[1.45rem]">
+              Se hoje o seu WhatsApp ainda recebe gente perguntando tudo do zero,
+              sua página ainda não está preparando a conversa como deveria.
+            </p>
+
+            <Button
+              asChild
+              className="h-11 rounded-full bg-foreground px-5 text-primary-foreground hover:bg-foreground/90"
+            >
+              <a href={whatsappHref} target="_blank" rel="noreferrer">
+                Quero uma página assim
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
