@@ -122,20 +122,20 @@ export function HeroSection() {
 
         <div className="mb-8 max-w-[1040px]">
           <h1
-            className="text-[clamp(3rem,6.2vw,5.85rem)] font-display leading-[0.94] tracking-tight text-background"
+            className="text-[clamp(3rem,6.2vw,5.85rem)] font-display leading-[1.02] md:leading-[0.99] xl:leading-[0.94] tracking-tight text-background"
           >
-            <span className="hero-line-mask block pb-[0.04em]">
+            <span className="hero-line-mask block pt-[0.04em] pb-[0.12em] -mb-[0.06em]">
               <span
-                className={`hero-line-inner block md:whitespace-nowrap ${
+                className={`hero-line-inner block xl:whitespace-nowrap ${
                   isVisible ? "hero-line-inner-visible" : ""
                 }`}
               >
                 {heroContent.titleTop}
               </span>
             </span>
-            <span className="hero-line-mask block">
+            <span className="hero-line-mask block pt-[0.03em] pb-[0.1em] -mb-[0.04em]">
               <span
-                className={`hero-line-inner block md:whitespace-nowrap ${
+                className={`hero-line-inner block xl:whitespace-nowrap ${
                   isVisible ? "hero-line-inner-visible" : ""
                 }`}
                 style={{ transitionDelay: "120ms" }}
