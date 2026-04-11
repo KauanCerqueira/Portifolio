@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Check, Shield } from "lucide-react";
+import { ArrowRight, Check, Flame, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { pricingIncludes, whatsappHref } from "@/lib/landing-content";
 
@@ -38,6 +38,13 @@ export function PricingSection() {
               </div>
             </div>
 
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-orange-500/10 border border-orange-500/20 px-4 py-1.5">
+              <Flame className="w-3.5 h-3.5 text-orange-400" />
+              <span className="text-[11px] font-semibold text-orange-400 uppercase tracking-[0.1em]">
+                Preço de abril — válido enquanto durar
+              </span>
+            </div>
+
             <div className="mb-8">
               <span className="font-mono text-xs text-muted-foreground">01</span>
               <h3 className="font-display text-3xl lg:text-4xl text-foreground mt-2">
@@ -70,7 +77,7 @@ export function PricingSection() {
               className="w-full sm:w-auto bg-foreground text-primary-foreground hover:bg-foreground/90 rounded-full h-12 px-6 group"
             >
               <a href={whatsappHref} target="_blank" rel="noreferrer">
-                Quero garantir essa vaga
+                Pegar essa vaga antes que feche
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -82,6 +89,10 @@ export function PricingSection() {
               <p className="text-[13px] text-muted-foreground flex items-center gap-1.5">
                 <Shield className="w-3.5 h-3.5" />
                 Ajustes até você aprovar.
+              </p>
+              <p className="text-[13px] text-green-600 font-medium flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                7 pessoas fecharam na última semana
               </p>
             </div>
           </div>

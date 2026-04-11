@@ -42,16 +42,16 @@ export function CtaSection() {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               <div className="flex-1">
                 <h2 className="text-4xl lg:text-7xl font-display tracking-tight mb-8 leading-[0.95]">
-                  O cliente já está clicando.
+                  Enquanto você pensa,
                   <br />
-                  Falta ele chamar.
+                  seu concorrente já chamou.
                 </h2>
 
                 <p className="mb-12 max-w-xl text-xl leading-relaxed text-background/72">
-                  Se hoje você ainda explica tudo por mensagem, áudio e texto solto,
-                  provavelmente tem cliente desistindo no meio. Me chama no WhatsApp,
-                  me conta o que você vende e eu te mostro como essa estrutura faria
-                  sentido no seu negócio.
+                  Cada dia sem uma página estruturada é um dia perdendo cliente
+                  que já estava pronto para fechar. Me chama no WhatsApp, me
+                  conta o que você vende e eu te mostro como essa estrutura
+                  faria sentido no seu negócio.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-start gap-4">
@@ -59,10 +59,10 @@ export function CtaSection() {
                     <Button
                       asChild
                       size="lg"
-                      className="h-14 rounded-full bg-background px-8 text-base text-foreground group hover:bg-background/90"
+                      className="shimmer-cta h-14 rounded-full bg-background px-8 text-base text-foreground group hover:bg-background/90"
                     >
                       <a href={whatsappHref} target="_blank" rel="noreferrer">
-                        Quero ver no meu negócio
+                        Quero minha página esta semana
                         <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                       </a>
                     </Button>
@@ -73,12 +73,12 @@ export function CtaSection() {
                     variant="outline"
                     className="h-14 rounded-full border-background/18 bg-background/[0.03] px-8 text-base text-background hover:bg-background/[0.08]"
                   >
-                    <a href="#pricing">Ver investimento</a>
+                    <a href="#pricing">Só R$ 650 — ver o que inclui</a>
                   </Button>
                 </div>
 
                 <p className="mt-8 text-sm font-mono text-background/56">
-                  Resposta rápida. 4 vagas por semana.
+                  Resposta em minutos. Últimas 3 páginas: todas entregues em menos de 5 dias.
                 </p>
               </div>
 

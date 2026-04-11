@@ -94,6 +94,12 @@ export function TestimonialsSection() {
             Quando a página está certa, o WhatsApp muda: menos curioso, mais
             contexto e mais intenção de compra.
           </p>
+          <div className="mt-5 inline-flex items-center gap-3 rounded-full border border-foreground/10 bg-foreground/[0.03] px-4 py-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+            <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-foreground/60">
+              12+ páginas entregues · 3 esta semana
+            </span>
+          </div>
         </div>
 
         <div className="grid gap-px bg-foreground/10 lg:grid-cols-3">
@@ -116,13 +122,13 @@ export function TestimonialsSection() {
               </div>
 
               <div className="mt-4 rounded-[1.35rem] border border-foreground/10 bg-[#ebe6de] p-2 sm:p-3">
-                <div className="h-[250px] overflow-hidden rounded-[0.95rem] sm:h-[285px] lg:h-[240px] xl:h-[280px]">
+                <div className="overflow-hidden rounded-[0.95rem]">
                   <Image
                     src={testimonial.imageSrc}
                     alt={testimonial.alt}
                     width={testimonial.imageWidth}
                     height={testimonial.imageHeight}
-                    className="h-full w-full rounded-[0.95rem] object-cover object-top"
+                    className="h-auto w-full rounded-[0.95rem] object-cover object-top"
                     priority={index === 0}
                   />
                 </div>
@@ -172,7 +178,7 @@ export function TestimonialsSection() {
               className="h-11 rounded-full bg-foreground px-5 text-primary-foreground hover:bg-foreground/90"
             >
               <a href={whatsappHref} target="_blank" rel="noreferrer">
-                Quero uma página assim
+                Quero resultado igual
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>

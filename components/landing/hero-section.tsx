@@ -169,10 +169,10 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-background hover:bg-background/88 text-foreground px-8 h-14 text-base rounded-full group shadow-[0_18px_40px_rgba(0,0,0,0.24)]"
+              className="shimmer-cta bg-background hover:bg-background/88 text-foreground px-8 h-14 text-base rounded-full group shadow-[0_18px_40px_rgba(0,0,0,0.24)]"
             >
               <a href={whatsappHref} target="_blank" rel="noreferrer">
-                Quero ver no meu negócio
+                Garantir minha vaga agora
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -182,37 +182,37 @@ export function HeroSection() {
               variant="outline"
               className="h-14 px-8 text-base rounded-full border-background/18 bg-background/[0.05] text-background hover:bg-background/[0.12] hover:text-background"
             >
-              <a href="#how-it-works">Entender como funciona</a>
+              <a href="#how-it-works">Ver como funciona (grátis)</a>
             </Button>
           </div>
 
           <div
-            className={`mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.18em] font-mono text-background/52 transition-all duration-700 delay-400 ${
+            className={`mt-7 flex flex-col gap-3 transition-all duration-700 delay-400 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-              Estrutura para gerar contato
-            </span>
-            <span className="hidden sm:inline h-3 w-px bg-background/20" />
-            <span>Entrega em até 5 dias úteis</span>
-          </div>
+            <div className="inline-flex items-center gap-1.5 sm:gap-2.5 rounded-full border border-red-500/20 bg-red-500/[0.08] px-3 py-1.5 sm:px-4 sm:py-2 w-fit urgency-pulse max-w-full">
+              <span className="urgency-dot inline-block h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-red-500 shrink-0" />
+              <span className="text-[9.5px] sm:text-[12px] whitespace-nowrap sm:whitespace-normal font-semibold text-red-400 uppercase tracking-[0.12em]">
+                Apenas 2 vagas restantes esta semana
+              </span>
+            </div>
 
-          <div
-            className={`mt-4 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] font-mono text-background/60 transition-all duration-700 delay-500 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
-          >
-            <span className="w-2 h-2 rounded-full bg-background/58" />
-            4 vagas por semana para manter o prazo
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] uppercase tracking-[0.18em] font-mono text-background/52">
+              <span className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                12+ páginas entregues no último mês
+              </span>
+              <span className="hidden sm:inline h-3 w-px bg-background/20" />
+              <span>Entrega em até 5 dias úteis</span>
+            </div>
           </div>
         </div>
 
       </div>
 
       <div
-        className={`relative z-10 mt-auto pb-10 lg:pb-12 transition-all duration-700 delay-700 ${
+        className={`relative z-10 mt-16 lg:mt-auto pb-10 lg:pb-12 transition-all duration-700 delay-700 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >

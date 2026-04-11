@@ -6,7 +6,7 @@ export const brand = {
 };
 
 const whatsappMessage =
-  "Oi, Kauan! Quero entender como uma página assim poderia funcionar no meu negócio.";
+  "Oi Kauan, quero garantir minha vaga essa semana.";
 
 export const whatsappNumberDisplay = "+55 19 99209-0500";
 export const whatsappNumberRaw = "5519992090500";
@@ -21,7 +21,7 @@ export const navLinks = [
 ];
 
 export const heroContent = {
-  kicker: "Poucos projetos por vez para manter o prazo.",
+  kicker: "Agenda limitada — poucos projetos por vez.",
   titleTop: "Seu negócio já recebe clique.",
   titleBottomLead: "Falta virar",
   titleBottomAccent: "contato.",

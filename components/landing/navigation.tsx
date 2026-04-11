@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowRight, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { brand, navLinks, whatsappHref } from "@/lib/landing-content";
@@ -9,8 +9,10 @@ import { brand, navLinks, whatsappHref } from "@/lib/landing-content";
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isBannerDismissed, setIsBannerDismissed] = useState(true);
   const hasNavSurface = isScrolled || isMobileMenuOpen;
   const isOverlayNav = !hasNavSurface;
+  const showBanner = !isBannerDismissed && !isScrolled && !isMobileMenuOpen;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +24,63 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const dismissed = sessionStorage.getItem("urgency-banner-dismissed");
+    setIsBannerDismissed(!!dismissed);
+  }, []);
+
+  const handleDismissBanner = () => {
+    setIsBannerDismissed(true);
+    sessionStorage.setItem("urgency-banner-dismissed", "1");
+  };
+
   return (
     <header
       className={`fixed z-50 transition-all duration-500 ${
         hasNavSurface ? "top-4 left-4 right-4" : "top-0 left-0 right-0"
       }`}
     >
+      {/* Urgency banner — only visible at top, hides on scroll */}
+      <div
+        className={`urgency-banner overflow-hidden transition-all duration-500 ${
+          showBanner ? "max-h-12 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="relative flex items-center justify-center gap-3 px-4 py-2 sm:gap-4 sm:py-2.5">
+          <div
+            aria-hidden="true"
+            className="urgency-banner-accent absolute inset-x-0 bottom-0 h-[2px]"
+          />
+
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="urgency-dot inline-block h-1.5 w-1.5 rounded-full bg-red-500 shrink-0 sm:h-2 sm:w-2" />
+            <span className="text-[10px] font-medium text-white/90 sm:text-[12px]">
+              <span className="font-bold text-red-400">2 vagas</span>
+              <span> esta semana</span>
+              <span className="hidden lg:inline"> — Entrega garantida em 5 dias</span>
+            </span>
+          </div>
+
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-semibold text-white transition-colors hover:bg-white/20 sm:gap-1.5 sm:px-3.5 sm:py-1.5 sm:text-xs"
+          >
+            Garantir vaga
+            <ArrowRight className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
+          </a>
+
+          <button
+            onClick={handleDismissBanner}
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-white/40 transition-colors hover:text-white/80 sm:right-3"
+            aria-label="Fechar banner"
+          >
+            <X className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+          </button>
+        </div>
+      </div>
+
       <nav
         className={`mx-auto relative overflow-hidden transition-all duration-500 ${
           hasNavSurface ? "max-w-[1200px] rounded-2xl" : "max-w-[1400px]"
@@ -111,7 +164,7 @@ export function Navigation() {
                 }
               >
                 <a href={whatsappHref} target="_blank" rel="noreferrer">
-                  Chamar no WhatsApp
+                  Falar agora
                 </a>
               </Button>
             </MagneticButton>
